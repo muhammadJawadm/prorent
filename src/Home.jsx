@@ -7,6 +7,27 @@ import { FiSliders } from 'react-icons/fi';
 import { BiCalendar } from 'react-icons/bi';
 
 function Home() {
+    const [categoryIndex, setCategoryIndex] = useState(0);
+
+    const categories = [
+        { img: "/camera1.png", name: "צלום", alt: "Camera" },
+        { img: "/setting.png", name: "בנייה", alt: "Construction" },
+        { img: "/plant.png", name: "גינון", alt: "Gardening" },
+        { img: "/bulb.png", name: "תאורה", alt: "Lighting" },
+        { img: "/lawnmover.png", name: "אחרו", alt: "Other" }
+    ];
+
+    const itemsToShow = 3;
+    const maxIndex = categories.length - itemsToShow;
+
+    const handlePrev = () => {
+        setCategoryIndex(prev => Math.max(0, prev - 1));
+    };
+
+    const handleNext = () => {
+        setCategoryIndex(prev => Math.min(maxIndex, prev + 1));
+    };
+
     return (
         <div className="app">
             {/* Header */}
@@ -70,44 +91,41 @@ function Home() {
                 </div>
             </section>
 
-            {/* Categories */}
+            {/* Categories Carousel */}
             <section className="categories">
                 <div className="container">
-                    <div className="categories-grid">
-                        <div className="category-card">
-                            <div className="category-icon">
-                                <img src="/camera1.png" alt="Camera" />
+                    <div className="carousel-wrapper">
+                        <button
+                            className="carousel-arrow carousel-arrow-left"
+                            onClick={handlePrev}
+                            disabled={categoryIndex === 0}
+                        >
+                            ◀
+                        </button>
+
+                        <div className="categories-carousel">
+                            <div
+                                className="categories-grid"
+                                style={{ transform: `translateX(${categoryIndex * -220}px)` }}
+                            >
+                                {categories.map((category, index) => (
+                                    <div className="category-card" key={index}>
+                                        <div className="category-icon">
+                                            <img src={category.img} alt={category.alt} />
+                                        </div>
+                                        <h3>{category.name}</h3>
+                                    </div>
+                                ))}
                             </div>
-                            <h3>צלום</h3>
                         </div>
 
-                        <div className="category-card">
-                            <div className="category-icon">
-                                <img src="/setting.png" alt="Other" />
-                            </div>
-                            <h3>בנייה</h3>
-                        </div>
-
-                        <div className="category-card">
-                            <div className="category-icon">
-                                <img src="/plant.png" alt="Other" />
-                            </div>
-                            <h3>גינון</h3>
-                        </div>
-
-                        <div className="category-card">
-                            <div className="category-icon">
-                                <img src="/bulb.png" alt="Other" />
-                            </div>
-                            <h3>תאורה</h3>
-                        </div>
-
-                        <div className="category-card">
-                            <div className="category-icon">
-                                <img src="/lawnmover.png" alt="Other" />
-                            </div>
-                            <h3>אחרו</h3>
-                        </div>
+                        <button
+                            className="carousel-arrow carousel-arrow-right"
+                            onClick={handleNext}
+                            disabled={categoryIndex === maxIndex}
+                        >
+                            ▶
+                        </button>
                     </div>
                 </div>
             </section>
