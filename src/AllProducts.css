@@ -1,0 +1,56 @@
+/* Additional styles for All Products page */
+.all-products-header {
+    padding: 140px 0 60px;
+    background: var(--light-gray);
+    text-align: center;
+}
+
+.all-products-header h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.all-products-header p {
+    font-size: 20px;
+    color: var(--text-light);
+}
+
+.all-products-section {
+    padding: 60px 0 80px;
+}
+
+.all-products-section .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1200px) {
+    .all-products-section .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 968px) {
+    .all-products-section .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .all-products-header h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 640px) {
+    .all-products-section .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .all-products-header {
+        padding: 120px 0 40px;
+    }
+
+    .all-products-header h1 {
+        font-size: 28px;
+    }
+}
