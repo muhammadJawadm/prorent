@@ -76,7 +76,7 @@ function Home() {
                     <div className="categories-grid">
                         <div className="category-card">
                             <div className="category-icon">
-                                <img src="/camera.png" alt="Camera" />
+                                <img src="/camera1.png" alt="Camera" />
                             </div>
                             <h3>צלום</h3>
                         </div>
@@ -104,7 +104,7 @@ function Home() {
 
                         <div className="category-card">
                             <div className="category-icon">
-                                <img src="/lawnmower.png" alt="Other" />
+                                <img src="/lawnmover.png" alt="Other" />
                             </div>
                             <h3>אחרו</h3>
                         </div>
