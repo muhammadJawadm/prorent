@@ -83,21 +83,21 @@ function Home() {
 
                         <div className="category-card">
                             <div className="category-icon">
-                                🔧
+                                <img src="/setting.png" alt="Other" />
                             </div>
                             <h3>בנייה</h3>
                         </div>
 
                         <div className="category-card">
                             <div className="category-icon">
-                                🌿
+                                <img src="/plant.png" alt="Other" />
                             </div>
                             <h3>גינון</h3>
                         </div>
 
                         <div className="category-card">
                             <div className="category-icon">
-                                💡
+                                <img src="/bulb.png" alt="Other" />
                             </div>
                             <h3>תאורה</h3>
                         </div>
