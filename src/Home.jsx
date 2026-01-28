@@ -126,21 +126,23 @@ function Home() {
                     <div className="products-grid">
                         <div className="product-card">
                             <div className="product-image">
-                                <img src="/camera.png" alt="DSLR Camera" />
+                                <img src="/1.png" alt="DSLR Camera" />
                                 <span className="badge">לפי שעה</span>
+                                <div className="price-badge">
+                                    <span className="price-icon">📸</span>
+                                    <span className="price-amount">120</span>
+                                    <span className="price-period">/שעה</span>
+                                </div>
+                                <div className="info-badge">מחר  219km   </div>
                             </div>
                             <div className="product-info">
                                 <h3 className="product-title">המצלמה מצלמת DSLR</h3>
-                                <div className="rating">
-                                    ⭐⭐⭐⭐<span style={{ opacity: 0.3 }}>⭐</span>
-                                </div>
-                                <div className="product-meta">
-                                    <div className="price">
-                                        ₪120
-                                        <span className="price-period">/שעה</span>
+                                <div className='product-info-details'>
+                                    <div className="rating">
+                                        ⭐⭐⭐⭐<span style={{ opacity: 0.3 }}>⭐</span>
                                     </div>
                                     <div className="product-details">
-                                        📍 מגר - שכר
+                                        1.8 km מקד
                                     </div>
                                 </div>
                             </div>
@@ -148,20 +150,23 @@ function Home() {
 
                         <div className="product-card">
                             <div className="product-image">
-                                <img src="/drill.png" alt="Drill" />
+                                <img src="/2.png" alt="Drill" />
+                                <span className="badge">לפי שעה</span>
+                                <div className="price-badge">
+                                    <span className="price-icon">📸</span>
+                                    <span className="price-amount">90</span>
+                                    <span className="price-period">/שעה</span>
+                                </div>
+                                <div className="info-badge">מחר 2.3km</div>
                             </div>
                             <div className="product-info">
-                                <h3 className="product-title">מגר 21 מחר</h3>
-                                <div className="rating">
-                                    ⭐⭐⭐⭐⭐
-                                </div>
-                                <div className="product-meta">
-                                    <div className="price">
-                                        ₪90
-                                        <span className="price-period">/שעה</span>
+                                <h3 className="product-title">מלון, משנה חונמקציות</h3>
+                                <div className='product-info-details'>
+                                    <div className="rating">
+                                        ⭐⭐⭐⭐⭐
                                     </div>
                                     <div className="product-details">
-                                        📍 ביצע פרת מגר 2.3 km
+                                        2.3 km מקד
                                     </div>
                                 </div>
                             </div>
@@ -169,20 +174,23 @@ function Home() {
 
                         <div className="product-card">
                             <div className="product-image">
-                                <img src="/lawnmower.png" alt="Garden Mower" />
+                                <img src="/3.png" alt="Garden Mower" />
+                                <span className="badge">לפי שעה</span>
+                                <div className="price-badge">
+                                    <span className="price-icon">📸</span>
+                                    <span className="price-amount">150</span>
+                                    <span className="price-period">/שעה</span>
+                                </div>
+                                <div className="info-badge">מחר 1.8km</div>
                             </div>
                             <div className="product-info">
-                                <h3 className="product-title">גינן מגוועד גינון</h3>
-                                <div className="rating">
-                                    ⭐⭐⭐⭐<span style={{ opacity: 0.3 }}>⭐</span>
-                                </div>
-                                <div className="product-meta">
-                                    <div className="price">
-                                        ₪150
-                                        <span className="price-period">/שעה</span>
+                                <h3 className="product-title">גינון מעסוקת רעניו</h3>
+                                <div className='product-info-details'>
+                                    <div className="rating">
+                                        ⭐⭐⭐⭐<span style={{ opacity: 0.3 }}>⭐</span>
                                     </div>
                                     <div className="product-details">
-                                        📍 הרחריח מגר 1.8 km
+                                        1.8 km מקד
                                     </div>
                                 </div>
                             </div>
