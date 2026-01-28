@@ -17,7 +17,7 @@ function Home() {
         { img: "/lawnmover.png", name: "אחרו", alt: "Other" }
     ];
 
-    const itemsToShow = 3;
+    const itemsToShow = 5;
     const maxIndex = categories.length - itemsToShow;
 
     const handlePrev = () => {
@@ -94,38 +94,24 @@ function Home() {
             {/* Categories Carousel */}
             <section className="categories">
                 <div className="container">
-                    <div className="carousel-wrapper">
-                        <button
-                            className="carousel-arrow carousel-arrow-left"
-                            onClick={handlePrev}
-                            disabled={categoryIndex === 0}
-                        >
-                            ◀
-                        </button>
 
-                        <div className="categories-carousel">
-                            <div
-                                className="categories-grid"
-                                style={{ transform: `translateX(${categoryIndex * -220}px)` }}
-                            >
-                                {categories.map((category, index) => (
-                                    <div className="category-card" key={index}>
-                                        <div className="category-icon">
-                                            <img src={category.img} alt={category.alt} />
-                                        </div>
-                                        <h3>{category.name}</h3>
+
+
+                    <div className="categories-carousel">
+                        <div
+                            className="categories-grid"
+                        >
+                            {categories.map((category, index) => (
+                                <div className="category-card" key={index}>
+                                    <div className="category-icon">
+                                        <img src={category.img} alt={category.alt} />
                                     </div>
-                                ))}
-                            </div>
+                                    <h3>{category.name}</h3>
+                                </div>
+                            ))}
                         </div>
 
-                        <button
-                            className="carousel-arrow carousel-arrow-right"
-                            onClick={handleNext}
-                            disabled={categoryIndex === maxIndex}
-                        >
-                            ▶
-                        </button>
+
                     </div>
                 </div>
             </section>
